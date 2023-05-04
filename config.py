@@ -29,11 +29,11 @@ PORT = os.environ.get("PORT", "8080")
 
 #shortner
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shorturllink.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '4b4ee8f8717d775262ef74432e202b8be8597b62')
+SHORTLINK_API = environ.get('SHORTLINK_API', '451aea1ef82af8659cf3712ad85e839ce9e85f2f')
 
 #Database 
 DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://cheesy:cheesy.8697@cluster0.kjg8cfb.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DATABASE_NAME", "fileshare2")
+DB_NAME = os.environ.get("DATABASE_NAME", "tellyx")
 
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
