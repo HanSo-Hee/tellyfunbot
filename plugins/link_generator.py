@@ -57,7 +57,7 @@ async def batch(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=link)]])
     
-    await second_message.reply_text(f"<b>Here is your link</b>\n\n{link} \n\n<code>{link}</code>", quote=True, reply_markup=reply_markup)
+    await second_message.reply_text(f"<b>Here is your link</b>\n\n<code>{link}</code>\n\n Buy Your Own SHortner Bot Here @OwnYourBotz", quote=True, reply_markup=reply_markup)
 
 
 @Bot.on_message(filters.private & filters.user(ADMINS) & filters.command('genlink'))
@@ -80,4 +80,4 @@ async def link_generator(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=link)]])
     
-    await channel_message.reply_text(f"<b>Here is your link</b>\n\n{linkk} \n\n<code>{link}</code>", quote=True, reply_markup=reply_markup)
+    await channel_message.reply_text(f"<b>Here is your link</b>\n\n<code>{link}</code>\n\n Buy Your Own SHortner Bot Here @OwnYourBotz", quote=True, reply_markup=reply_markup)
