@@ -16,7 +16,7 @@ def generate_random_alphanumeric():
     return random_chars
 
 def get_short(url):
-    rget = requests.get(f"https://shorturllink.in/api?api={SHORTLINK_API}&url={url}&alias={generate_random_alphanumeric()}")
+    rget = requests.get(f"https://tnshort.net/api?api={SHORTLINK_API}&url={url}&alias={generate_random_alphanumeric()}")
     rjson = rget.json()
     if rjson["status"] == "success" or rget.status_code == 200:
         return rjson["shortenedUrl"]
@@ -80,4 +80,4 @@ async def link_generator(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=link)]])
     
-    await channel_message.reply_text(f"<b>Here is your link</b>\n\n<code>{link}</code>\n\n Buy Your Own SHortner Bot Here @OwnYourBotz", quote=True, reply_markup=reply_markup)
+    await channel_message.reply_text(f"<b>Here is your link</b>\n\n<code>{link}\n{linkk}</code>\n\n Buy Your Own SHortner Bot Here @OwnYourBotz", quote=True, reply_markup=reply_markup)
